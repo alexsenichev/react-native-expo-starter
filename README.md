@@ -12,5 +12,6 @@
 - Module aliases
 - Tests using jest and enzyme
 - Integration with Sentry
+- Detect circular dependencies
 
 Only configuration with no additional logic and redundant code.
