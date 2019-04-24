@@ -1,0 +1,93 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "NODE_ENV=test jest",
+    "test:cov": "jest --coverage",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "postlint": "madge --circular --tsConfig=./tsconfig.json App.tsx",
+    "lint-autofix": "tslint -p tsconfig.json -c tslint.json --fix"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "axios": "^0.18.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "expo": "^32.0.0",
+    "jest": "^24.7.1",
+    "lodash": "^4.17.11",
+    "mobx": "^5.9.4",
+    "mobx-persist": "^0.4.1",
+    "mobx-react": "^5.4.3",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "^3.0.9",
+    "sentry-expo": "^1.12.0",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.1",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/expo": "^32.0.10",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.6",
+    "@types/react-native": "^0.57.43",
+    "@types/styled-components": "^4.1.14",
+    "babel-jest": "^24.7.1",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-preset-expo": "^5.0.0",
+    "enzyme-to-json": "^3.3.5",
+    "husky": "^1.3.1",
+    "jest-cli": "^24.7.1",
+    "jest-expo": "^32.0.0",
+    "lint-staged": "^8.1.5",
+    "madge": "^3.4.4",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "mobx-react-devtools": "^6.1.1",
+    "prettier": "^1.17.0",
+    "react-test-renderer": "^16.8.6",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.4.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.tsx?$": "babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "setupFiles": [
+      "./setup-enzyme.ts"
+    ]
+  },
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint-autofix",
+      "npm run format",
+      "git add"
+    ]
+  }
+}

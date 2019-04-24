@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["es6"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@app/components": ["src/components"],
+      "@app/components/*": ["src/components/*"],
+      "@app/navigation": ["src/navigation"],
+      "@app/navigation/*": ["src/navigation/*"],
+      "@app/screens": ["src/screens"],
+      "@app/screens/*": ["src/screens/*"],
+      "@app/config": ["src/config"],
+      "@app/config/*": ["src/config/*"],
+      "@app/network": ["src/network"],
+      "@app/network/*": ["src/network/*"],
+      "@app/styled": ["src/styled"],
+      "@app/styled/*": ["src/styled/*"],
+      "@app/stores": ["src/stores"],
+      "@app/stores/*": ["src/stores/*"],
+      "@app/themes": ["src/themes"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
