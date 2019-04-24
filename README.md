@@ -3,6 +3,7 @@
 ## What's in the box:
 
 - TypeScript
+- TSLint and Prettier
 - Expo
 - MobX
 - Axios
