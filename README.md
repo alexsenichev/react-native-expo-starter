@@ -1,4 +1,4 @@
-#React Native Starter Kit
+# React Native Starter Kit
 
 ## What's in the box:
 
