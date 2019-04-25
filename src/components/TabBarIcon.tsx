@@ -1,12 +1,11 @@
-import { IApplicationTheme } from '@app/themes';
+import { IThemedComponent } from '@app/themes';
 import { Icon } from 'expo';
 import React from 'react';
 import { withTheme } from 'styled-components';
 
-interface ITabBar {
+interface ITabBar extends IThemedComponent {
   name: string;
   focused: boolean;
-  theme: IApplicationTheme;
 }
 
 function TabBarIcon({ name, focused, theme }: ITabBar) {
