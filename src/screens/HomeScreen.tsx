@@ -13,7 +13,14 @@ export default class HomeScreen extends React.Component<IConnectedComponent> {
   public render() {
     const { updateExampleStateValue, exampleStateValue } = this.props.store;
     return (
-      <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <View
+        style={{
+          alignItems: 'center',
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
         <View>
           <Text style={{ fontSize: 40 }}>{exampleStateValue ? '🙂' : '😎'}</Text>
           <TouchableOpacity onPress={updateExampleStateValue} style={{ borderColor: 'blue', marginTop: 20 }}>

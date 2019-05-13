@@ -7,7 +7,7 @@
 - Expo
 - MobX
 - Axios
-- Styled components with themes
+- React native extended stylesheet
 - Configuration system
 - Module aliases
 - Tests using jest and enzyme
